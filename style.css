@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "main";
+    src: url("assets/fonts/Neucha-Regular.ttf");
+}
+
+html {
+    font-size: 14px;
+    background-color: rgb(4, 8, 10);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #163b1f;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #163b1f;
+    /* creates padding around scroll thumb */
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("assets/backgrounds/forest2.jpg");
+    background-size: 120%;
+    background-position: center;
+    box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.3);
+    animation: zoomBack 5s ease-out;
+}
+
+@keyframes zoomBack {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 120%;
+    }
+}
+
+.top {
+    flex-basis: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.team {
+    color: white;
+    padding: 0 10vh;
+    font-size: 2rem;
+    font-family: "main", cursive;
+}
+
+.title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    color: white;
+    font-family: "main", sans-serif;
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
+    text-shadow: 0 0 1rem black;
+    padding-right: 20vw;
+}
+
+
+header h4 {
+    color: white;
+    font-family: "main", sans-serif;
+    position: relative;
+    top: -1rem;
+    left: 6rem;
+    font-size: 1.5rem;
+}
+
+main {
+    height: 100vh;
+}
