@@ -6,46 +6,55 @@
 html {
     font-size: 14px;
     background-color: rgb(4, 8, 10);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
     width: 12px;
-    /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
     background: transparent;
-    /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #163b1f;
-    /* color of the scroll thumb */
     border-radius: 20px;
-    /* roundness of the scroll thumb */
     border: 3px solid #163b1f;
-    /* creates padding around scroll thumb */
 }
 
+
 header {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("assets/backgrounds/forest2.jpg");
-    background-size: 120%;
-    background-position: center;
+    background-color: transparent;
     box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.3);
+}
+
+.bg {
     animation: zoomBack 5s ease-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100vh;
+    object-fit: cover;
+    transform: scale(1);
+    overflow: hidden;
 }
 
 @keyframes zoomBack {
     0% {
-        background-size: 100%;
+        transform: scale(1.2);
     }
     100% {
-        background-size: 120%;
+        transform: scale(1);
     }
 }
 
@@ -80,7 +89,6 @@ header h1 {
     padding-right: 20vw;
 }
 
-
 header h4 {
     color: white;
     font-family: "main", sans-serif;
@@ -92,4 +100,16 @@ header h4 {
 
 main {
     height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS стилі для мобільних пристроїв */
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* CSS стилі для планшетів */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* CSS стилі для ноутбуків та десктопів */
 }
