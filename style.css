@@ -5,7 +5,7 @@
 
 html {
     font-size: 14px;
-    background-color: rgb(4, 8, 10);
+    background-color: #04080a;
     overflow-x: hidden;
 }
 
@@ -32,7 +32,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.3);
+    /* box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.3); */
+    overflow: hidden;
 }
 
 .bg {
@@ -98,9 +99,86 @@ header h4 {
     font-size: 1.5rem;
 }
 
+.trunk {
+    position: relative;
+    top: -3rem;
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+
 main {
     height: 100vh;
+    color: white;
 }
+
+.subTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "main", cursive;
+    gap: 2rem;
+}
+
+.subTitle h1 {
+    font-size: 3rem;
+}
+
+
+.subTitle p {
+    font-size: 1.5rem;
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 7rem 5rem;
+    gap: 3rem;
+    font-family: "main", cursive;
+}
+
+.tiles .item {
+    display: flex;
+    gap: 1rem;
+    background-color: #163b1f;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.tiles img {
+    width: 30%;
+    object-fit: contain;
+}
+
+.tiles .item h3 {
+    font-size: 2rem;
+}
+
+.tiles .item .textBar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tiles .button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999999px;
+    width: fit-content;
+}
+
+.tiles .water{
+background-color: rgb(14, 61, 97);
+}
+.tiles .village{
+    background-color: rgb(78, 49, 6);
+    }
+ .tiles .field{
+        background-color: rgb(155, 130, 6)
+        }
 
 @media only screen and (max-width: 767px) {
     /* CSS стилі для мобільних пристроїв */
