@@ -3,21 +3,29 @@ document.querySelector("header").addEventListener("click", ()=>{
 })
 
 gsap.registerPlugin(ScrollTrigger) 
+gsap.from(".item:nth-child(2n+1)", {
+  x: "-50vh"
+})
+gsap.registerPlugin(ScrollTrigger) 
+gsap.from(".item:nth-child(2n)", {
+  x: "50vh"
+})
 gsap.to(".item", {
     scrollTrigger: {
         trigger: ".item",
         start: "top 80%",
         end: "bottom",
         markers: true,
-        scrub: true,
+        // scrub: true,
         toggleActions: "restart pause reverse pause"
     },
-    x: "50vw",
-    backgroundColor: "red",
+    x: "0",
+    // backgroundColor: "red",
     duration: 3,
     // rotation: 180,
-    // ease: "elastic.inOut(1,0.4)"
+    ease: "elastic.inOut(1,0.4)"
   });
+
 
 
 
