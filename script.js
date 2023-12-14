@@ -1,35 +1,38 @@
-document.querySelector("header").addEventListener("click", ()=>{
-  new Audio("assets/audio/owl-hooting-48028.mp3").play()
-})
+document.querySelector("header").addEventListener("click", () => {
+    new Audio("assets/audio/owl-hooting-48028.mp3").play();
+});
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger);
 gsap.from(".item:nth-child(2n+1)", {
-  x: "-50vh"
-})
-gsap.registerPlugin(ScrollTrigger) 
+    x: "-100vh",
+});
+gsap.registerPlugin(ScrollTrigger);
 gsap.from(".item:nth-child(2n)", {
-  x: "50vh"
-})
-gsap.to(".item", {
+    x: "100vh",
+});
+
+gsap.to(".item:nth-child(1), .item:nth-child(2)", {
     scrollTrigger: {
-        trigger: ".item",
-        start: "top 80%",
+        trigger: ".item:nth-child(1)",
+        start: "top 100%",
         end: "bottom",
         markers: true,
         // scrub: true,
-        toggleActions: "restart pause reverse pause"
+        toggleActions: "restart pause reverse pause",
     },
     x: "0",
-    // backgroundColor: "red",
-    duration: 3,
-    // rotation: 180,
-    ease: "elastic.inOut(1,0.4)"
-  });
+    duration: 1,
+});
 
-
-
-
-
-
-
-
+gsap.to(".item:nth-child(3), .item:nth-child(4)", {
+    scrollTrigger: {
+        trigger: ".item:nth-child(3)",
+        start: "top 100%",
+        end: "bottom",
+        markers: true,
+        // scrub: true,
+        toggleActions: "restart pause reverse pause",
+    },
+    x: "0",
+    duration: 1,
+});
