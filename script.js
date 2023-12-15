@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.from(".item:nth-child(2n+1)", {
     x: "-100vh",
 });
-gsap.registerPlugin(ScrollTrigger);
 gsap.from(".item:nth-child(2n)", {
     x: "100vh",
 });

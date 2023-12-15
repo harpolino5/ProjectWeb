@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.closeBtn {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    transition: all 0.3s;
+}
+
+.closeBtn:hover {
+    background-color: white;
+    box-shadow: 0 0 5px white;
+}
+
+.overlay_inner {
+    background-color: rgba(255, 255, 255, 0.381);
+    width: 80vw;
+    height: 90vh;
+    border-radius: 3rem;
+    padding: 3rem;
+    overflow: hidden;
+}
+
+.overlay .header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-family: "main", cursive;
+}
+
+.overlay .main {
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.overlay img {
+    width: 30vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin: 0 2rem 2rem 0;
+    border-radius: 2rem;
+}
+
+.overlay .main::-webkit-scrollbar {
+    width: 12px;
+}
+
+.overlay .main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overlay .main::-webkit-scrollbar-thumb {
+    background-color: #163b1f;
+    border-radius: 20px;
+    border: 3px solid #163b1f;
+}
