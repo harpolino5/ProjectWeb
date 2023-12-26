@@ -19,7 +19,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-
+    text-align: center;
     transition: all 0.3s;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .overlay_inner {
-    background-color: rgba(255, 255, 255, 0.381);
+    background-color: rgba(189, 189, 189, 0.884);
     width: 80vw;
     height: 90vh;
     border-radius: 3rem;
@@ -47,6 +47,8 @@
 .overlay .main {
     height: 70vh;
     overflow-y: scroll;
+    font-size: 1.3rem;
+    font-family: "main", sans-serif;
 }
 
 .overlay img {

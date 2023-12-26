@@ -9,6 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="scripts/leafs.js" defer></script>
+    <script src="scripts/searchScript.js" defer></script>
+    <script src="scripts/overlay.js" defer></script>
+    <link rel="stylesheet" href="styles/overlay.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="clearStyle.css">
     <link rel="stylesheet" href="style.css">
@@ -20,6 +24,10 @@
         <img src="assets/backgrounds/mainHeader.png" alt="" class="bg">
         <div class="top">
             <a href="index.html" class="team">Rat&Cat</a>
+            <div class="searchBar">
+                <input type="text" placeholder="лісовик..." />
+                <div class="searchList"></div>
+            </div>
         </div>
         <div class="title">
             <h1>Міфічний світ України</h1>
@@ -82,6 +90,27 @@
             </div>
             
         </div>
+        <div class="overlay">
+            <div class="overlay_inner">
+                <div class="header">
+                    <div class="name">Name</div>
+                    <div class="closeBtn">X</div>
+                </div>
+                <div class="main">
+                    <img src="" alt="" class="overImg">
+                    <div class="text"></div>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer>
+        <img src="../assets/images/logo.png" alt="">
+        <ul class="authors">
+            <li>Автори проекту: </li>
+            <br>
+            <li>Стародубова Вєра Володимирівна</li>
+            <li>Акімова Юлія Володимирівна</li>
+        </ul>
+    </footer>
 </body>
 </html>

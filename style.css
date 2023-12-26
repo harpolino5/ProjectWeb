@@ -60,7 +60,7 @@ header {
 .top {
     flex-basis: 10vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -177,6 +177,23 @@ main {
     background-image: url("assets/backgrounds/лісовий_містичний_фон.png");
 }
 
+footer {
+    height: 30vh;
+    background-image: url("../assets/backgrounds/ліс2.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    gap: 5rem;
+    font-size: 2rem;
+    font-family: "main", cursive;
+}
+
+footer img {
+    height: 20vh;
+}
+
 @media only screen and (max-width: 767px) {
     /* CSS стилі для мобільних пристроїв */
 }
@@ -188,3 +205,59 @@ main {
 @media only screen and (min-width: 1025px) {
     /* CSS стилі для ноутбуків та десктопів */
 }
+
+
+/* search bar */
+
+header .searchBar {
+    font-family: "main", sans-serif;
+    position: relative;
+}
+
+header .searchBar input {
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    margin-right: 1rem;
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+header .searchBar input:focus {
+    outline: none;
+}
+
+header .searchBar .searchBtn {
+    font-size: 1.5rem;
+    transition: text-shadow 0.5s;
+}
+
+header .searchBar .searchBtn:hover {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+header .searchList {
+    display: none;
+    position: absolute;
+    margin-top: 3px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    color: black;
+    width: 30vw;
+    flex-direction: column;
+}
+
+header .searchList a {
+    text-decoration: none;
+    color: black;
+}
+
+header .searchList hr {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0.2rem 0;
+}
+
+/* end search bar*/

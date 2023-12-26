@@ -11,7 +11,7 @@ for (let i = 0; i < items.length; i++) {
             trigger: ".tiles",
             start: "top 100%",
             end: "bottom",
-            markers: true,
+            // markers: true,
             // scrub: true,
             toggleActions: "restart pause none pause",
         },
