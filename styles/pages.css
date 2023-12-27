@@ -141,6 +141,9 @@ main {
 
 .item img {
     border-radius: 1rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
 }
 
 .item .textBar {
