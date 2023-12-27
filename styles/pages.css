@@ -1,7 +1,7 @@
-/* @font-face {
+@font-face {
     font-family: "main";
     src: url("../assets/fonts/Neucha-Regular.ttf");
-} */
+}
 
 html {
     font-size: 14px;
@@ -18,7 +18,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(138, 138, 24);
+    background-color: #163b1f;
     border-radius: 20px;
     border: 3px solid #163b1f;
 }
@@ -86,7 +86,6 @@ header h1 {
     letter-spacing: 0.3rem;
     font-size: 4rem;
     text-shadow: 0 0 1rem black;
-    padding-right: 20vw;
 }
 
 header h4 {
@@ -109,6 +108,8 @@ main {
     align-items: center;
     font-family: "main", cursive;
     gap: 2rem;
+    text-align: center;
+    padding: 0 2rem;
 }
 
 .subTitle h1 {
@@ -130,7 +131,6 @@ main {
 
 .item {
     font-family: "main", sans-serif;
-    background-color: #163b1f60;
     flex-direction: column;
     padding: 2rem;
     border-radius: 1.5rem;
@@ -152,7 +152,6 @@ main {
 
 footer {
     height: 30vh;
-    /* background-image: url("../assets/backgrounds/ліс2.png"); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -167,4 +166,108 @@ footer img {
     height: 20vh;
 }
 
+
+/* Адаптивність */
+
+
+
+
+@media all and (max-width: 765px) {
+    /* CSS стилі для планшетів */
+    header h1 {
+        padding-right: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+    header h4 {
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .subTitle h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subTitle p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .tiles {
+        margin: 1rem 0;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        place-items: center;
+    }
+
+    .tiles .item {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+        text-align: center;
+    }
+    .tiles .item img {
+        width: 100%;
+    }
+
+    .tiles .button {
+        width: 100%;
+    }
+    footer {
+        font-size: 1rem;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    /* CSS стилі для телефонів */
+    header h1 {
+        padding-right: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+    header h4 {
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .subTitle h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subTitle p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .tiles {
+        margin: 1rem 0;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        place-items: center;
+    }
+
+    .tiles .item {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+        text-align: center;
+    }
+    .tiles .item img {
+        width: 100%;
+    }
+
+    .tiles .button {
+        width: 100%;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
 

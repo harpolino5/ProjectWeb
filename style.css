@@ -9,6 +9,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -194,18 +198,6 @@ footer img {
     height: 20vh;
 }
 
-@media only screen and (max-width: 767px) {
-    /* CSS стилі для мобільних пристроїв */
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* CSS стилі для планшетів */
-}
-
-@media only screen and (min-width: 1025px) {
-    /* CSS стилі для ноутбуків та десктопів */
-}
-
 
 /* search bar */
 
@@ -261,3 +253,116 @@ header .searchList hr {
 }
 
 /* end search bar*/
+
+/* Адаптивність */
+
+
+
+
+@media all and (max-width: 765px) {
+    /* CSS стилі для планшетів */
+    header h1 {
+        padding-right: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+    header h4 {
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .subTitle h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subTitle p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .tiles {
+        margin: 1rem 0;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        place-items: center;
+    }
+
+    .tiles .item {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+        text-align: center;
+    }
+    .tiles .item img {
+        width: 100%;
+    }
+
+    .tiles .button {
+        width: 100%;
+    }
+    footer {
+        font-size: 1rem;
+    }
+
+    header .searchBar input{
+        width: 50vw;
+    }
+
+    header .searchList {
+        width: 50vw;
+    }
+}
+
+@media all and (max-width: 500px) {
+    /* CSS стилі для телефонів */
+    header h1 {
+        padding-right: 0;
+        font-size: 3rem;
+        text-align: center;
+    }
+    header h4 {
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .subTitle h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subTitle p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .tiles {
+        margin: 1rem 0;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        place-items: center;
+    }
+
+    .tiles .item {
+        flex-direction: column;
+        width: 95%;
+        align-items: center;
+        text-align: center;
+    }
+    .tiles .item img {
+        width: 100%;
+    }
+
+    .tiles .button {
+        width: 100%;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* Кінець адаптивності */

@@ -74,3 +74,23 @@
     border-radius: 20px;
     border: 3px solid #163b1f;
 }
+
+
+@media all and (max-width: 765px) {
+    /* CSS стилі для планшетів */
+    .overlay img {
+        width: 30vw;
+        height: 30vh;
+        margin: 0.5rem;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    /* CSS стилі для телефонів */
+    .overlay img {
+        width: 80%;
+        margin: 0.5rem;
+        float: none;
+    }
+}
