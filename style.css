@@ -255,10 +255,6 @@ header .searchList hr {
 /* end search bar*/
 
 /* Адаптивність */
-
-
-
-
 @media all and (max-width: 765px) {
     /* CSS стилі для планшетів */
     header h1 {

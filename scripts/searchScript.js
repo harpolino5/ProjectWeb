@@ -1,3 +1,4 @@
+// Масив оюєктів з варіантами запитів та відповідями
 const links = [
     {
         query: [
@@ -171,15 +172,24 @@ const links = [
         title: "Лісовий Гриць",
     },
 ];
-
+// Отримуємо елемент введення з класом "searchBar" та навішуємо обробник події "input"
 document
     .querySelector(".searchBar input")
     .addEventListener("input", (event) => {
+        // Отримуємо елемент списку з класом "searchList"
         let list = document.querySelector(".searchList");
+
+        // Отримуємо введений текст та конвертуємо його в нижній регістр
         let query = event.target.value.toLowerCase();
+
+        // Розбиваємо введений текст на масив слів
         let queryArray = query.split(" ");
+
+        // Перевірка, чи введено хоча б одне слово
         if (query.length) {
             let items = [];
+
+            // Для кожного слова в масиві шукаємо відповідні елементи в масиві "links"
             queryArray.forEach((word) => {
                 items.push(
                     ...links.filter((el) => {
@@ -188,14 +198,21 @@ document
                 );
             });
 
+            // Визначаємо видимість списку в залежності від наявності знайдених елементів
             if (items.length) list.style.display = "flex";
             else list.style.display = "none";
+
+            // Очищаємо вміст списку
             list.innerHTML = "";
-            if (items.length > 10) items.length = 10;
+            if (items.length > 10) items.length = 10; // Встановлюємо ліміт на кількість відображуваних елементів (не більше 10)
+
+            
             items.forEach((el) => {
                 let span = document.createElement("span");
+                // Додаємо обробник події "click" для відкриття оверлею при кліку на елемент
                 let linkElem = document.createElement("a");
                 linkElem.addEventListener("click", () => {
+                    // Очищаємо поле введення, ховаємо список та викликаємо функцію відкриття оверлею з переданим заголовком
                     document.querySelector(".searchBar input").value = "";
                     list.style.display = "none";
                     openOverlay(el.title);
@@ -205,6 +222,7 @@ document
                 list.append(span);
             });
         } else {
+            // Якщо поле введення порожнє, ховаємо список
             list.style.display = "none";
         }
     });
